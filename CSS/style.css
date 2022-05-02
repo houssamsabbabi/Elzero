@@ -658,9 +658,8 @@ header .container nav ul li a {
     border-radius: 10px;
     position: relative;
     transition: all 1s; 
-    z-index: 0;
 }
-.team-member-container .container .members .member:hover {
+.team-member-container .container .members .member:hover .img-container img {
     filter: grayscale(80%); 
 }  
 .team-member-container .container .members .member::before {
@@ -672,6 +671,7 @@ header .container nav ul li a {
     right: 0;
     transition: all 0.3s;
     background-color: rgba(185, 185, 185, 0.3);
+    z-index: 0;
 }
 .team-member-container .container .members .member:hover::before {
     width: 100%;
@@ -690,12 +690,13 @@ header .container nav ul li a {
 .team-member-container .container .members .member .social-media {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     position: absolute;
     width: 20px;
-    gap: 20px;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+    z-index: 3;
 }
 .team-member-container .container .members .member .social-media i {
     color: var(--secondary-color);
@@ -1124,15 +1125,27 @@ header .container nav ul li a {
     position: relative;
 }
 .pricing-container .container .plans .plan:nth-child(2) .head::before {
-    content: "hiiiii";
+    content: "Most Popular";
     position: absolute;
-    width: 100px;
-    top: 0;
-    right: 10px;
-    padding: 10px;
+    top: 0px;
+    right: -120px;
+    padding: 10px 30px 10px 10px;
     background-color: var(--main-color);
     color: white;
-    transform: skewX(30deg) rotateZ(120deg);
+    font-weight: bold;
+    font-size: 18px;
+    transform-origin: 0 0;
+    transform: rotateZ(90deg);
+}
+.pricing-container .container .plans .plan:nth-child(2) .head::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 120px;
+    right: 40px;
+    border: 20px solid transparent;
+    border-bottom-color: white;
 }
 .pricing-container .container .plans .plan .head {
     margin-bottom: 20px;
