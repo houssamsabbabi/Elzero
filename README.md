@@ -6,7 +6,7 @@
 
 ## Technologies
 - HTML 
-- CSS (Flex Box, CSS Grid, Transform, Animation, Media queries...))
+- CSS (Flex Box, CSS Grid, Transform, Animation, Media queries...)
 ## Additional Tools
 - Google Fonts
 - Fontawesome Icons
